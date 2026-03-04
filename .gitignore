@@ -1,0 +1,7 @@
+node_modules
+.next
+.env
+.env.production
+.vercel
+*.tsbuildinfo
+next-env.d.ts

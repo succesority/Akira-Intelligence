@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: 2.5rem;
+  
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --color-akira-emerald: oklch(0.65 0.15 160);
+  --color-akira-deep: oklch(0.2 0.05 160);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.98 0.005 240);
+  --foreground: oklch(0.2 0.02 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 240);
+  --primary: oklch(0.45 0.15 160);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.92 0.01 240);
+  --secondary-foreground: oklch(0.3 0.02 240);
+  --muted: oklch(0.95 0.01 240);
+  --muted-foreground: oklch(0.5 0.02 240);
+  --accent: oklch(0.45 0.15 160 / 0.1);
+  --accent-foreground: oklch(0.45 0.15 160);
+  --destructive: oklch(0.6 0.2 25);
+  --border: oklch(0.9 0.01 240);
+  --input: oklch(0.9 0.01 240);
+  --ring: oklch(0.45 0.15 160);
+}
+
+.dark {
+  --radius: 0.75rem;
+  --background: oklch(0.12 0.015 240);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.15 0.02 240 / 0.5);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.15 0.02 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.65 0.15 160);
+  --primary-foreground: oklch(0.1 0.05 160);
+  --secondary: oklch(0.2 0.02 240);
+  --secondary-foreground: oklch(0.8 0.02 240);
+  --muted: oklch(0.18 0.02 240);
+  --muted-foreground: oklch(0.6 0.02 240);
+  --accent: oklch(0.65 0.15 160 / 0.15);
+  --accent-foreground: oklch(0.65 0.15 160);
+  --destructive: oklch(0.5 0.2 25);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.65 0.15 160);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground selection:bg-primary/30; font-feature-settings: "cv02", "cv03", "cv04", "ss01"; }
+}
+
+@layer utilities {
+  .terminal-text { 
+    font-family: 'JetBrains Mono', monospace; 
+    font-size: 0.8125rem; 
+    letter-spacing: -0.01em;
+  }
+  
+  .akira-card { 
+    @apply bg-card backdrop-blur-xl border border-white/10 dark:border-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] rounded-xl;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .akira-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(to bottom right, rgba(255,255,255,0.1), transparent, rgba(255,255,255,0.05));
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  .akira-emerald-color { color: var(--color-akira-emerald); }
+  
+  .liquid-glass {
+    @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)];
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px var(--color-primary);
+  }
+
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+.container { width: 100%; margin: 0 auto; padding: 0 1.5rem; }
+@media (min-width: 1024px) { .container { max-width: 1400px; padding: 0 4rem; } }
