@@ -1,4 +1,5 @@
 https://x.com/Akiraintell
+ca : 4PXb8RXuy2MRygmVLicZWgtQtN6oMwE7bseZue3qpump
 # 🌌 Akira Intelligence
 
 <div align="center">
