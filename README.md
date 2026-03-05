@@ -1,7 +1,7 @@
+https://x.com/Akiraintell
 # 🌌 Akira Intelligence
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Akira-Intelligence/branding/main/header-neural.png" alt="Akira Banner" width="800">
   <br />
   <p align="center">
     <b>Autonomous Neural Architectural Synthesis & Spatial Orchestration Engine</b>
