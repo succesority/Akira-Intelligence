@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           <div className="fixed top-6 right-6 z-[60] flex items-center gap-3">
             <a
-              href="https://x.com/AkiraIntel"
+              href="https://x.com/Akiraintell"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 group"
@@ -57,7 +57,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               />
             </a>
             <a
-              href="https://github.com/Akira-Intelligence"
+              href="https://github.com/succesority/Akira-Intelligence.git"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 transition-all duration-300 group"

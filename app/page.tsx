@@ -215,7 +215,7 @@ export default function Home() {
             </div>
           </motion.div>
           <div className="flex items-center gap-2">
-            <ShadcnButton variant="ghost" size="icon" className="w-10 h-10 rounded-2xl" onClick={() => window.open('https://github.com/Akira-Intelligence', '_blank')}><GithubLogo weight="bold" className="h-5 w-5" /></ShadcnButton>
+            <ShadcnButton variant="ghost" size="icon" className="w-10 h-10 rounded-2xl" onClick={() => window.open('https://github.com/succesority/Akira-Intelligence.git', '_blank')}><GithubLogo weight="bold" className="h-5 w-5" /></ShadcnButton>
             <ShadcnButton variant="ghost" size="icon" className="w-10 h-10 rounded-2xl"><Gear weight="bold" className="h-5 w-5" /></ShadcnButton>
             <ShadcnButton variant="ghost" size="icon" className="w-10 h-10 rounded-2xl"><Info weight="bold" className="h-5 w-5" /></ShadcnButton>
           </div>
