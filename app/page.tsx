@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
   Play,
   Sparkle,
@@ -197,8 +198,16 @@ export default function Home() {
             transition={SPRING_CONFIG}
             className="flex items-center gap-4"
           >
-            <div className="w-10 h-10 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/20 group hover:rotate-6 transition-transform">
-              <Cube weight="duotone" className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+            <div className="relative w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Image
+                src="/LOGO.png"
+                alt={PROJECT_NAME}
+                width={48}
+                height={48}
+                className="relative z-10 object-contain drop-shadow-[0_0_12px_rgba(var(--primary),0.3)]"
+                priority
+              />
             </div>
             <div>
               <h1 className="text-2xl font-black tracking-tighter uppercase akira-emerald-color">{PROJECT_NAME}</h1>
@@ -487,7 +496,13 @@ export default function Home() {
         <div className="container flex flex-col items-center gap-6">
           <div className="flex items-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all group">
             <div className="flex items-center gap-2">
-              <Cube weight="duotone" className="w-5 h-5" />
+              <Image
+                src="/LOGO.png"
+                alt="Logo"
+                width={20}
+                height={20}
+                className="opacity-60 group-hover:opacity-100 transition-opacity"
+              />
               <span className="text-xs font-black uppercase tracking-widest">NeuralOS</span>
             </div>
             <div className="flex items-center gap-2">

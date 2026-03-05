@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description: "Advanced Neural Architectural Synthesis and Autonomous Design Intelligence.",
   keywords: ["Akira Intelligence", "AI Architecture", "Autonomous Design", "Neural Synthesis", "Virtual City Builder"],
   authors: [{ name: "Akira Team" }],
-  icons: { icon: "/favicon.png" },
+  icons: { icon: "/LOGO.png" },
   openGraph: {
     title: PROJECT_NAME,
     description: PROJECT_TAGLINE,

@@ -1,7 +1,7 @@
 export const PROJECT_NAME = "Akira Intelligence";
 export const PROJECT_TAGLINE = "Neural Architectural Synthesis Engine";
 export const APP_TITLE = "Akira Intelligence";
-export const APP_LOGO = "/akira-logo.png";
+export const APP_LOGO = "/LOGO.png";
 export const COOKIE_NAME = "manus_session";
 
 export function getLoginUrl() {
